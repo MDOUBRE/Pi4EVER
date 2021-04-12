@@ -1,0 +1,13 @@
+- id: '1617317858589'
+  alias: relay3
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.on
+    to: 'on'
+  condition: []
+  action:
+  - service: switch.toggle
+    target:
+      entity_id: switch.doorlock
+  mode: single
